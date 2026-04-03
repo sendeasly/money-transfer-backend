@@ -16,7 +16,7 @@ app.use(express.json());
 
 // Unganisha database
 const db = new Pool({
-  connectionString: process.env.DATABASE_URL,
+  connectionString: process.env.DATABASE_URL || 'postgresql://postgres:OoJDZSAQJRHZaKuPnTapETgzdyctTsvH@autorack.proxy.rlwy.net:35718/railway',
   ssl: {
     rejectUnauthorized: false
   }
