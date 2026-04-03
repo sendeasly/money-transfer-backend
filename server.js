@@ -25,6 +25,7 @@ const db = new Pool({
 db.connect((err) => {
   if (err) {
     console.log('Hitilafu ya database:', err.message);
+    console.log('DATABASE_URL:', process.env.DATABASE_URL);
   } else {
     console.log('Database imeunganishwa!');
   }
