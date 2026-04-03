@@ -10,7 +10,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 const app = express();
 app.use(cors({
-  origin: 'http://localhost:3001'
+  origin: '*'
 }));
 app.use(express.json());
 
