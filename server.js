@@ -161,7 +161,7 @@ app.get('/historia/:mtumiaji_id', async (req, res) => {
 });
 
 // Anza seva
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Seva inaendesha kwenye port ${PORT}`);
 });
