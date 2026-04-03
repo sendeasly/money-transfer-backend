@@ -97,10 +97,10 @@ app.post('/ingia', async (req, res) => {
 
     // Tengeneza token
     const token = jwt.sign(
-      { id: mtumiaji.id, email: mtumiaji.email },
-      process.env.JWT_SECRET,
-      { expiresIn: '7d' }
-    );
+  { id: mtumiaji.id, email: mtumiaji.email },
+  process.env.JWT_SECRET || 'money_transfer_siri_123',
+  { expiresIn: '7d' }
+);
 
     res.json({
       ujumbe: 'Umeingia!',
