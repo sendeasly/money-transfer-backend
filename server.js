@@ -15,11 +15,10 @@ app.use(express.json());
 
 // Unganisha database
 const db = new Pool({
-  user: process.env.DB_USER,
-  host: process.env.DB_HOST,
-  database: process.env.DB_NAME,
-  password: process.env.DB_PASSWORD,
-  port: process.env.DB_PORT,
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
 });
 
 // Thibitisha database inafanya kazi
@@ -160,7 +159,7 @@ app.get('/historia/:mtumiaji_id', async (req, res) => {
 });
 
 // Anza seva
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Seva inaendesha kwenye port ${PORT}`);
 });
